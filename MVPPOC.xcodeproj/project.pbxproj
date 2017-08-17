@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306BCC111B822B050E855324 /* Pods_MVPPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409930E6750BB9C7F761EEFA /* Pods_MVPPOC.framework */; };
 		36454FD71F413DF40085DA01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FD61F413DF40085DA01 /* AppDelegate.swift */; };
-		36454FD91F413DF50085DA01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FD81F413DF50085DA01 /* ViewController.swift */; };
 		36454FDC1F413DF50085DA01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36454FDA1F413DF50085DA01 /* Main.storyboard */; };
 		36454FDE1F413DF50085DA01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36454FDD1F413DF50085DA01 /* Assets.xcassets */; };
 		36454FE11F413DF50085DA01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36454FDF1F413DF50085DA01 /* LaunchScreen.storyboard */; };
 		36454FEC1F413DF50085DA01 /* MVPPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FEB1F413DF50085DA01 /* MVPPOCTests.swift */; };
+		36454FF71F413F0B0085DA01 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FF61F413F0B0085DA01 /* CountriesViewController.swift */; };
+		36454FF91F413F320085DA01 /* CountriesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FF81F413F320085DA01 /* CountriesContract.swift */; };
+		36454FFC1F413FC00085DA01 /* CountriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FFB1F413FC00085DA01 /* CountriesPresenter.swift */; };
+		36454FFE1F41411A0085DA01 /* injections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FFD1F41411A0085DA01 /* injections.swift */; };
+		364550001F4144B50085DA01 /* CountriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FFF1F4144B50085DA01 /* CountriesRepository.swift */; };
+		364550021F4148FC0085DA01 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364550011F4148FC0085DA01 /* Country.swift */; };
+		F025A5DCAC24D0E8C7AF4965 /* Pods_MVPPOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EBFD1A863100F09EDA2E62 /* Pods_MVPPOCTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +35,6 @@
 /* Begin PBXFileReference section */
 		36454FD31F413DF40085DA01 /* MVPPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36454FD61F413DF40085DA01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36454FD81F413DF50085DA01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36454FDB1F413DF50085DA01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36454FDD1F413DF50085DA01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36454FE01F413DF50085DA01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +42,18 @@
 		36454FE71F413DF50085DA01 /* MVPPOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPPOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36454FEB1F413DF50085DA01 /* MVPPOCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPPOCTests.swift; sourceTree = "<group>"; };
 		36454FED1F413DF50085DA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36454FF61F413F0B0085DA01 /* CountriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
+		36454FF81F413F320085DA01 /* CountriesContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesContract.swift; sourceTree = "<group>"; };
+		36454FFB1F413FC00085DA01 /* CountriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesPresenter.swift; sourceTree = "<group>"; };
+		36454FFD1F41411A0085DA01 /* injections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = injections.swift; sourceTree = "<group>"; };
+		36454FFF1F4144B50085DA01 /* CountriesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesRepository.swift; sourceTree = "<group>"; };
+		364550011F4148FC0085DA01 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		409930E6750BB9C7F761EEFA /* Pods_MVPPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5C722C3FDB00156A093E0E /* Pods-MVPPOCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPPOCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPPOCTests/Pods-MVPPOCTests.release.xcconfig"; sourceTree = "<group>"; };
+		52C401D84819EEBB4DBB401B /* Pods-MVPPOCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPPOCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPPOCTests/Pods-MVPPOCTests.debug.xcconfig"; sourceTree = "<group>"; };
+		55EBFD1A863100F09EDA2E62 /* Pods_MVPPOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPPOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7044581EE9CAC21F883B19D5 /* Pods-MVPPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPPOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPPOC/Pods-MVPPOC.release.xcconfig"; sourceTree = "<group>"; };
+		D3AD7DE93EC455DE0AC4005A /* Pods-MVPPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPPOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPPOC/Pods-MVPPOC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306BCC111B822B050E855324 /* Pods_MVPPOC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F025A5DCAC24D0E8C7AF4965 /* Pods_MVPPOCTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +82,8 @@
 				36454FD51F413DF40085DA01 /* MVPPOC */,
 				36454FEA1F413DF50085DA01 /* MVPPOCTests */,
 				36454FD41F413DF40085DA01 /* Products */,
+				D20D4B22A20DA5D794159CB4 /* Pods */,
+				479F6CF5BD7E1DA4E8BB17FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +99,14 @@
 		36454FD51F413DF40085DA01 /* MVPPOC */ = {
 			isa = PBXGroup;
 			children = (
+				364550031F4154130085DA01 /* Models */,
+				36454FFA1F413FAD0085DA01 /* Countries */,
 				36454FD61F413DF40085DA01 /* AppDelegate.swift */,
-				36454FD81F413DF50085DA01 /* ViewController.swift */,
 				36454FDA1F413DF50085DA01 /* Main.storyboard */,
 				36454FDD1F413DF50085DA01 /* Assets.xcassets */,
 				36454FDF1F413DF50085DA01 /* LaunchScreen.storyboard */,
 				36454FE21F413DF50085DA01 /* Info.plist */,
+				36454FFD1F41411A0085DA01 /* injections.swift */,
 			);
 			path = MVPPOC;
 			sourceTree = "<group>";
@@ -96,6 +120,45 @@
 			path = MVPPOCTests;
 			sourceTree = "<group>";
 		};
+		36454FFA1F413FAD0085DA01 /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				36454FF61F413F0B0085DA01 /* CountriesViewController.swift */,
+				36454FF81F413F320085DA01 /* CountriesContract.swift */,
+				36454FFB1F413FC00085DA01 /* CountriesPresenter.swift */,
+				36454FFF1F4144B50085DA01 /* CountriesRepository.swift */,
+			);
+			name = Countries;
+			sourceTree = "<group>";
+		};
+		364550031F4154130085DA01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				364550011F4148FC0085DA01 /* Country.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		479F6CF5BD7E1DA4E8BB17FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				409930E6750BB9C7F761EEFA /* Pods_MVPPOC.framework */,
+				55EBFD1A863100F09EDA2E62 /* Pods_MVPPOCTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D20D4B22A20DA5D794159CB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3AD7DE93EC455DE0AC4005A /* Pods-MVPPOC.debug.xcconfig */,
+				7044581EE9CAC21F883B19D5 /* Pods-MVPPOC.release.xcconfig */,
+				52C401D84819EEBB4DBB401B /* Pods-MVPPOCTests.debug.xcconfig */,
+				4B5C722C3FDB00156A093E0E /* Pods-MVPPOCTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36454FF01F413DF50085DA01 /* Build configuration list for PBXNativeTarget "MVPPOC" */;
 			buildPhases = (
+				01ABBF03CFFFF6A4C3BCBE42 /* [CP] Check Pods Manifest.lock */,
 				36454FCF1F413DF40085DA01 /* Sources */,
 				36454FD01F413DF40085DA01 /* Frameworks */,
 				36454FD11F413DF40085DA01 /* Resources */,
+				ADAF5333B27385E001AFA0F4 /* [CP] Embed Pods Frameworks */,
+				0AF3FFE142493D17337AE890 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36454FF31F413DF50085DA01 /* Build configuration list for PBXNativeTarget "MVPPOCTests" */;
 			buildPhases = (
+				56547A5A1D4C405918554291 /* [CP] Check Pods Manifest.lock */,
 				36454FE31F413DF50085DA01 /* Sources */,
 				36454FE41F413DF50085DA01 /* Frameworks */,
 				36454FE51F413DF50085DA01 /* Resources */,
+				BDF6978CA3DDC6E8149DE794 /* [CP] Embed Pods Frameworks */,
+				FFA93C099A20E72FF8728E95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,13 +263,111 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01ABBF03CFFFF6A4C3BCBE42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0AF3FFE142493D17337AE890 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVPPOC/Pods-MVPPOC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56547A5A1D4C405918554291 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADAF5333B27385E001AFA0F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVPPOC/Pods-MVPPOC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDF6978CA3DDC6E8149DE794 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVPPOCTests/Pods-MVPPOCTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFA93C099A20E72FF8728E95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVPPOCTests/Pods-MVPPOCTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		36454FCF1F413DF40085DA01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36454FD91F413DF50085DA01 /* ViewController.swift in Sources */,
+				364550021F4148FC0085DA01 /* Country.swift in Sources */,
+				36454FFE1F41411A0085DA01 /* injections.swift in Sources */,
+				36454FF91F413F320085DA01 /* CountriesContract.swift in Sources */,
 				36454FD71F413DF40085DA01 /* AppDelegate.swift in Sources */,
+				36454FF71F413F0B0085DA01 /* CountriesViewController.swift in Sources */,
+				364550001F4144B50085DA01 /* CountriesRepository.swift in Sources */,
+				36454FFC1F413FC00085DA01 /* CountriesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +506,7 @@
 		};
 		36454FF11F413DF50085DA01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3AD7DE93EC455DE0AC4005A /* Pods-MVPPOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MVPPOC/Info.plist;
@@ -351,6 +519,7 @@
 		};
 		36454FF21F413DF50085DA01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7044581EE9CAC21F883B19D5 /* Pods-MVPPOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MVPPOC/Info.plist;
@@ -363,6 +532,7 @@
 		};
 		36454FF41F413DF50085DA01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C401D84819EEBB4DBB401B /* Pods-MVPPOCTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -377,6 +547,7 @@
 		};
 		36454FF51F413DF50085DA01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B5C722C3FDB00156A093E0E /* Pods-MVPPOCTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -408,6 +579,7 @@
 				36454FF21F413DF50085DA01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36454FF31F413DF50085DA01 /* Build configuration list for PBXNativeTarget "MVPPOCTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +588,7 @@
 				36454FF51F413DF50085DA01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
