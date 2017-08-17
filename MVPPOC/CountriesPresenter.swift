@@ -11,23 +11,20 @@ import Foundation
 
 class CountriesPresenter: CountriesPresenterProtocol {
     
-    var view: CountriesViewProtocol?
-    var repository: CountriesRepositoryProtocol?
-    var countries = [Country]()
+    weak var view: CountriesViewProtocol?
+    var repository: CountriesRepositoryProtocol
+    var countries = Array<Country>()
     
-    required init(repository: CountriesRepositoryProtocol?) {
+    init(repository: CountriesRepositoryProtocol) {
         self.repository = repository
-    }
-    
-    func setView(view: CountriesViewProtocol){
-        self.view = view
     }
     
     //MARK: CountriesPresenterProtocol
     func fetchCountries() {
-        repository?.getCountriesList(response: {[unowned self] countries in
-            self.countries = countries
-            self.view?.didFetchCountries()
+        repository.getCountriesList(response: {[weak self] countries in
+            guard let unwrappedSelf = self else { return }
+            unwrappedSelf.countries = countries
+            unwrappedSelf.view?.didFetchCountries()
         })
     }
     
@@ -35,7 +32,15 @@ class CountriesPresenter: CountriesPresenterProtocol {
         return countries.count
     }
     
-    func country(at indexPath: IndexPath) -> Country?{
-        return countries[indexPath.row]
+    func country(at indexPath: IndexPath) -> (String, String){
+        let country = countries[indexPath.row]
+        return (country.name, convert(date: country.date))
+    }
+
+    //MARK: Aux methods
+    func convert(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        return dateFormatter.string(from:date)
     }
 }

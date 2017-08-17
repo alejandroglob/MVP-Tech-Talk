@@ -19,6 +19,8 @@
 		36454FFE1F41411A0085DA01 /* injections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FFD1F41411A0085DA01 /* injections.swift */; };
 		364550001F4144B50085DA01 /* CountriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36454FFF1F4144B50085DA01 /* CountriesRepository.swift */; };
 		364550021F4148FC0085DA01 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364550011F4148FC0085DA01 /* Country.swift */; };
+		7055F3451F45F57F0080A143 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7055F3441F45F57F0080A143 /* Date.swift */; };
+		7055F3481F46012E0080A143 /* CountriesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7055F3471F46012E0080A143 /* CountriesViewControllerTests.swift */; };
 		F025A5DCAC24D0E8C7AF4965 /* Pods_MVPPOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EBFD1A863100F09EDA2E62 /* Pods_MVPPOCTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		52C401D84819EEBB4DBB401B /* Pods-MVPPOCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPPOCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPPOCTests/Pods-MVPPOCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		55EBFD1A863100F09EDA2E62 /* Pods_MVPPOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPPOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7044581EE9CAC21F883B19D5 /* Pods-MVPPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPPOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPPOC/Pods-MVPPOC.release.xcconfig"; sourceTree = "<group>"; };
+		7055F3441F45F57F0080A143 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		7055F3471F46012E0080A143 /* CountriesViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesViewControllerTests.swift; sourceTree = "<group>"; };
 		D3AD7DE93EC455DE0AC4005A /* Pods-MVPPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPPOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPPOC/Pods-MVPPOC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,12 +105,13 @@
 			children = (
 				364550031F4154130085DA01 /* Models */,
 				36454FFA1F413FAD0085DA01 /* Countries */,
+				7055F3461F46005B0080A143 /* Extensions */,
 				36454FD61F413DF40085DA01 /* AppDelegate.swift */,
+				36454FFD1F41411A0085DA01 /* injections.swift */,
 				36454FDA1F413DF50085DA01 /* Main.storyboard */,
 				36454FDD1F413DF50085DA01 /* Assets.xcassets */,
 				36454FDF1F413DF50085DA01 /* LaunchScreen.storyboard */,
 				36454FE21F413DF50085DA01 /* Info.plist */,
-				36454FFD1F41411A0085DA01 /* injections.swift */,
 			);
 			path = MVPPOC;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			children = (
 				36454FEB1F413DF50085DA01 /* MVPPOCTests.swift */,
 				36454FED1F413DF50085DA01 /* Info.plist */,
+				7055F3471F46012E0080A143 /* CountriesViewControllerTests.swift */,
 			);
 			path = MVPPOCTests;
 			sourceTree = "<group>";
@@ -146,6 +152,14 @@
 				55EBFD1A863100F09EDA2E62 /* Pods_MVPPOCTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7055F3461F46005B0080A143 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7055F3441F45F57F0080A143 /* Date.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		D20D4B22A20DA5D794159CB4 /* Pods */ = {
@@ -270,13 +284,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVPPOC-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0AF3FFE142493D17337AE890 /* [CP] Copy Pods Resources */ = {
@@ -300,13 +317,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVPPOCTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ADAF5333B27385E001AFA0F4 /* [CP] Embed Pods Frameworks */ = {
@@ -315,9 +335,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MVPPOC/Pods-MVPPOC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -364,6 +389,7 @@
 				364550021F4148FC0085DA01 /* Country.swift in Sources */,
 				36454FFE1F41411A0085DA01 /* injections.swift in Sources */,
 				36454FF91F413F320085DA01 /* CountriesContract.swift in Sources */,
+				7055F3451F45F57F0080A143 /* Date.swift in Sources */,
 				36454FD71F413DF40085DA01 /* AppDelegate.swift in Sources */,
 				36454FF71F413F0B0085DA01 /* CountriesViewController.swift in Sources */,
 				364550001F4144B50085DA01 /* CountriesRepository.swift in Sources */,
@@ -376,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36454FEC1F413DF50085DA01 /* MVPPOCTests.swift in Sources */,
+				7055F3481F46012E0080A143 /* CountriesViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

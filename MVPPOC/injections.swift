@@ -20,12 +20,12 @@ extension SwinjectStoryboard {
         }
         
         defaultContainer.register(CountriesPresenterProtocol.self) { r in
-            CountriesPresenter(repository: r.resolve(CountriesRepositoryProtocol.self))
+            CountriesPresenter(repository: r.resolve(CountriesRepositoryProtocol.self)!)
         }
         
         defaultContainer.storyboardInitCompleted(CountriesViewController.self) { r, c in
             c.presenter = r.resolve(CountriesPresenterProtocol.self)
-            c.presenter?.setView(view: c)
+            c.presenter?.view = c
         }
     }
     

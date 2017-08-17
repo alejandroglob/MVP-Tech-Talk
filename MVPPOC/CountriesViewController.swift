@@ -37,10 +37,13 @@ extension CountriesViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "Cell")
         if (cell == nil) {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
         }
-    
-        cell?.textLabel?.text = presenter?.country(at: indexPath)?.name ?? ""
+
+        let countryName = presenter?.country(at: indexPath).0 ?? ""
+        let date = presenter?.country(at: indexPath).1 ?? ""
+        cell?.textLabel?.text = countryName
+        cell?.detailTextLabel?.text = date
         
         return cell!
     }

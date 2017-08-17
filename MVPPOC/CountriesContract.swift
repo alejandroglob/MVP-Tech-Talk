@@ -13,16 +13,14 @@ protocol CountriesRepositoryProtocol {
     func getCountriesList(response: ([Country]) -> Void)
 }
 
-
-protocol CountriesViewProtocol {
+protocol CountriesViewProtocol: class {
     
     func didFetchCountries()
 }
 
-protocol CountriesPresenterProtocol {
-    
-    func setView(view: CountriesViewProtocol)
+protocol CountriesPresenterProtocol: class {
+    weak var view: CountriesViewProtocol? { get set}
     func fetchCountries()
-    func country(at indexPath: IndexPath) -> Country?
+    func country(at indexPath: IndexPath) -> (String, String)
     func countriesCount() -> Int
 }
