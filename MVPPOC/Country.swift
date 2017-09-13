@@ -12,3 +12,8 @@ struct Country{
     let name: String
     let date: Date
 }
+
+struct PresenterCountry {
+    let name: String
+    let date: String
+}

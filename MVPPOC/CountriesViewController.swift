@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CountriesMVPViewController: UIViewController {
+class CountriesViewController: UIViewController {
 
     let cellIdentifier = "Cell"
     var countries = [Country]()
@@ -18,7 +18,6 @@ class CountriesMVPViewController: UIViewController {
 
         loadData()
     }
-
 
     //MARK: Aux Methods
     func convert(date: Date) -> String {
@@ -43,22 +42,22 @@ class CountriesMVPViewController: UIViewController {
 }
 
 
-extension CountriesMVPViewController: UITableViewDataSource {
+extension CountriesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countries.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        if (cell == nil) {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
-        }
-
-        let country = countries[indexPath.row]
-        cell?.textLabel?.text = country.name
-        cell?.detailTextLabel?.text = convert(date: country.date)
         
-        return cell!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) else {
+            fatalError("Should've dequeued cell with that identifier")
+        }
+        
+        let country = countries[indexPath.row]
+        cell.textLabel?.text = country.name
+        cell.detailTextLabel?.text = convert(date: country.date)
+        
+        return cell
     }
 }
